@@ -10,6 +10,7 @@ const store = createStore();
 
 const server = new ApolloServer({
   typeDefs,
+  resolvers,
   dataSources: () => ({
     launchAPI: new LaunchAPI(),
     userAPI: new UserAPI({ store })
