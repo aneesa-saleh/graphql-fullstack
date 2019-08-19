@@ -6,15 +6,14 @@ export const menuItemClassName = css({
   flexGrow: 1,
   width: 0,
   fontFamily: 'inherit',
-  fontSize: 20,
+  fontSize: 15,
   color: 'inherit',
   letterSpacing: 1.5,
   textTransform: 'uppercase',
   textAlign: 'center',
   svg: {
-    display: 'block',
-    width: 60,
-    margin: `0 auto ${unit}px`,
+    width: 30,
+    margin: `0 auto`,
     fill: colors.secondary,
   },
 });
@@ -24,3 +23,11 @@ const MenuItem = styled(Link)(menuItemClassName, {
 });
 
 export default MenuItem;
+
+export const MenuItemTitle = styled('span')({
+  display: 'inline-block',
+  position: 'relative',
+  top: '50%',
+  transform: 'translateY(-50%)',
+  marginLeft: '10px'
+});
