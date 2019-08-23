@@ -5,23 +5,20 @@ import gql from 'graphql-tag';
 import { Loading, Header, LaunchDetail } from '../components';
 import { ActionButton } from '../containers';
 
+import { LAUNCH_TILE_DATA } from './launches';
+
 export const GET_LAUNCH_DETAILS = gql`
   query LaunchDetail($launchId: ID!) {
     launch(id: $launchId) {
-      id
-      site
       isBooked
       rocket {
-        id
-        name
         type
       }
-      mission {
-        name
-        missionPatch
-      }
+      ...LaunchTile
     }
   }
+
+  ${LAUNCH_TILE_DATA}
 `;
 
 export default function Launch({ launchId = 1 }) {
