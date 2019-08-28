@@ -6,6 +6,7 @@ import gql from 'graphql-tag';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Login from './pages/login';
 import Pages from './pages';
 import { resolvers, typeDefs } from './resolvers';
 import injectStyles from './styles';
