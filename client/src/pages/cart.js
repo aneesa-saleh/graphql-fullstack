@@ -19,7 +19,7 @@ export default function Cart() {
     <Fragment>
       <Header>My Cart</Header>
       {!data.cartItems || !data.cartItems.length ? (
-        <p data-test-id="empty-message">No items in your cart</p>
+        <p data-testid="empty-message">No items in your cart</p>
       ) : (
         <Fragment>
           {data.cartItems.map(launchId => (
