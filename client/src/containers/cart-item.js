@@ -15,7 +15,7 @@ export const GET_LAUNCH = gql`
   ${LAUNCH_TILE_DATA}
 `;
 
-export default function CartItem() {
+export default function CartItem({ launchId }) {
   const { data, loading, error } = useQuery(
     GET_LAUNCH,
     { variables: { launchId } }
