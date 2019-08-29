@@ -33,7 +33,8 @@ export default ({ launch }) => {
 
 export const cardClassName = css({
   padding: `${unit * 4}px ${unit * 5}px`,
-  borderRadius: 7,
+  borderRadius: 2,
+  boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 2px 6px rgba(0,0,0,0.23)',
   color: 'white',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
@@ -48,4 +49,8 @@ const StyledLink = styled(Link)(cardClassName, {
   ':not(:last-child)': {
     marginBottom: padding * 2,
   },
+  transition: 'all 0.3s cubic-bezier(.25,.8,.25,1)',
+  ':hover': {
+    boxShadow: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);',
+  }
 });
