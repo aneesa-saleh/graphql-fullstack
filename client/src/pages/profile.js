@@ -10,11 +10,9 @@ const GET_MY_TRIPS = gql`
     me {
       id
       email
-      trips {
         trips {
           ...LaunchTile
         }
-      }
     }
   }
   ${LAUNCH_TILE_DATA}
