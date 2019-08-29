@@ -37,7 +37,7 @@ export default function Footer() {
 const Container = styled('footer')({
   flexShrink: 0,
   marginTop: 'auto',
-  backgroundColor: 'rgba(255,255,255,0.9)',
+  backgroundColor: 'rgba(34, 10, 130,0.8)',
   color: colors.textSecondary,
   position: 'sticky',
   bottom: 0,

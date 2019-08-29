@@ -7,14 +7,14 @@ export const menuItemClassName = css({
   width: 0,
   fontFamily: 'inherit',
   fontSize: 15,
-  color: 'inherit',
+  color: 'white',
   letterSpacing: 1.5,
   textTransform: 'uppercase',
   textAlign: 'center',
   svg: {
     width: 30,
     margin: `0 auto`,
-    fill: colors.secondary,
+    fill: 'rgb(173, 120, 214)',
   },
 });
 
