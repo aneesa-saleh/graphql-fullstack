@@ -19,11 +19,12 @@ const BOOK_TRIPS = gql`
   }
 `;
 
-export default function BookTrips() {
-  const [bookTrips, { data, loading, error }] = useMutation(
+export default function BookTrips({ cartItems }) {
+  const [bookTrips, { data }] = useMutation(
     BOOK_TRIPS,
     {
-      refetchQueries: GET_CART_ITEMS.map(launchId => ({
+      variables: { launchIds: cartItems },
+      refetchQueries: cartItems.map(launchId => ({
         query: GET_LAUNCH,
         variables: { launchId },
       })),
